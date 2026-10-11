@@ -31,20 +31,21 @@
     }
   </script>
  </head>
- <body class="bg-ink text-cream font-sans antialiased selection:bg-mint selection:text-ink">
+ <body id="inicio" class="bg-ink text-cream font-sans antialiased selection:bg-mint selection:text-ink">
   <div class="flex min-h-screen flex-col">
    
    <!-- HEADER -->
    <header id="site-header" class="sticky top-0 z-50 w-full border-b transition-all duration-500 border-transparent bg-gradient-to-b from-ink/90 to-ink/60 backdrop-blur-md">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8 lg:py-4">
-     <a class="group flex shrink-0 items-center" href="/">
+     <a class="group flex shrink-0 items-center" href="#inicio">
       <span class="font-display text-2xl font-semibold tracking-wider text-cream group-hover:text-mint transition-colors">
         Menta <span class="italic text-mint">&</span> Romero
       </span>
      </a>
      
+     <!-- PC & TABLET NAV -->
      <nav class="hidden items-center gap-7 lg:flex">
-      <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-mint" href="/">Inicio</a>
+      <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-mint" href="#inicio">Inicio</a>
       <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-cream/80" href="#experiencia">Experiencia</a>
       <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-cream/80" href="#menu-preview">Menú Real</a>
       <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-cream/80" href="#reservar">Reservas</a>
@@ -58,6 +59,7 @@
       </a>
       <a href="#reservar" class="hidden rounded-full bg-mint px-5 py-2.5 text-sm font-medium tracking-wide text-ink transition-all duration-300 hover:bg-cream hover:shadow-[0_0_28px_rgba(159,216,180,0.45)] sm:block">Reservar mesa</a>
       
+      <!-- MOBILE HAMBURGER BUTTON -->
       <button id="menu-btn" type="button" aria-label="Abrir menú" class="rounded-full border border-cream/20 p-2.5 text-cream transition-colors hover:text-mint lg:hidden">
        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
       </button>
@@ -65,11 +67,11 @@
     </div>
 
     <!-- MOBILE MENU DRAWER -->
-    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-ink/95 border-b border-cream/10 px-6 py-6 backdrop-blur-xl lg:hidden transition-all">
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-ink/95 border-b border-cream/10 px-6 py-6 backdrop-blur-xl lg:hidden shadow-2xl transition-all">
       <nav class="flex flex-col gap-4 text-center">
-        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="/">Inicio</a>
+        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#inicio">Inicio</a>
         <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#experiencia">Experiencia</a>
-        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#menu-preview">Menú</a>
+        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#menu-preview">Menú Real</a>
         <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#reservar">Reservas</a>
         <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#contacto">Ubicación</a>
         <a href="#reservar" class="mt-2 rounded-full bg-mint px-6 py-3 text-sm font-medium text-ink text-center mobile-link">Reservar mesa</a>
@@ -274,9 +276,4 @@
             </p>
 
             <p class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-mint shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-              <span><strong>Horarios:</strong><br>• Martes a Sábado: 12:00 p.m. – 1:00 a.m.<br>• Domingo: 12:00 p.m. – 8:00 p.m.<br>• Lunes: Cerrado</span>
-            </p>
-
-            <p class="flex items-start gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-mint shrink-0 mt-0.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-mint shrink-0 mt-0.5"><circle cx="12" cy="12" r="10">
