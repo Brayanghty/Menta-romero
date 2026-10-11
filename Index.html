@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menta &amp; Romero — Rooftop Gastronómico, Altamira Village, Caracas</title>
+  <meta name="description" content="Restaurante rooftop en Altamira Village con vista panorámica al Ávila, piscina y cocina de autor por el chef Víctor Moreno. Reserva tu mesa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0B131D',
+            'ink-soft': '#131F2E',
+            mint: '#9FD8B4',
+            cream: '#FDFBF7',
+            'cream-dim': '#C5C8C6',
+            gold: '#E5C158',
+            terracotta: '#D97757'
+          },
+          fontFamily: {
+            sans: ['Jost', 'sans-serif'],
+            display: ['Cormorant Garamond', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+ </head>
+ <body class="bg-ink text-cream font-sans antialiased selection:bg-mint selection:text-ink">
+  <div class="flex min-h-screen flex-col">
+   
+   <!-- HEADER -->
+   <header id="site-header" class="sticky top-0 z-50 w-full border-b transition-all duration-500 border-transparent bg-gradient-to-b from-ink/90 to-ink/60 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-8 lg:py-4">
+     <a class="group flex shrink-0 items-center" href="/">
+      <span class="font-display text-2xl font-semibold tracking-wider text-cream group-hover:text-mint transition-colors">
+        Menta <span class="italic text-mint">&</span> Romero
+      </span>
+     </a>
+     
+     <nav class="hidden items-center gap-7 lg:flex">
+      <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-mint" href="/">Inicio</a>
+      <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-cream/80" href="#experiencia">Experiencia</a>
+      <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-cream/80" href="#menu-preview">Menú Real</a>
+      <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-cream/80" href="#reservar">Reservas</a>
+      <a class="relative text-sm font-light tracking-wide transition-colors duration-300 hover:text-mint text-cream/80" href="#contacto">Ubicación</a>
+     </nav>
+
+     <div class="flex items-center gap-3">
+      <a href="https://wa.me/584127005557" target="_blank" class="hidden items-center gap-2 rounded-full border border-cream/20 px-4 py-2 text-sm text-cream/90 transition-all duration-300 hover:border-mint hover:text-mint md:flex">
+       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+       +58 412-7005557
+      </a>
+      <a href="#reservar" class="hidden rounded-full bg-mint px-5 py-2.5 text-sm font-medium tracking-wide text-ink transition-all duration-300 hover:bg-cream hover:shadow-[0_0_28px_rgba(159,216,180,0.45)] sm:block">Reservar mesa</a>
+      
+      <button id="menu-btn" type="button" aria-label="Abrir menú" class="rounded-full border border-cream/20 p-2.5 text-cream transition-colors hover:text-mint lg:hidden">
+       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+      </button>
+     </div>
+    </div>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-ink/95 border-b border-cream/10 px-6 py-6 backdrop-blur-xl lg:hidden transition-all">
+      <nav class="flex flex-col gap-4 text-center">
+        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="/">Inicio</a>
+        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#experiencia">Experiencia</a>
+        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#menu-preview">Menú</a>
+        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#reservar">Reservas</a>
+        <a class="text-base text-cream hover:text-mint py-2 mobile-link" href="#contacto">Ubicación</a>
+        <a href="#reservar" class="mt-2 rounded-full bg-mint px-6 py-3 text-sm font-medium text-ink text-center mobile-link">Reservar mesa</a>
+      </nav>
+    </div>
+   </header>
+
+   <main class="flex-1">
+    
+    <!-- HERO SECTION -->
+    <section class="relative isolate overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=1920&q=80" alt="Rooftop en Altamira Village con vista al Ávila" class="absolute inset-0 -z-25 h-full w-full object-cover filter brightness-75">
+      <div class="absolute inset-0 -z-20 bg-gradient-to-b from-ink/85 via-ink/70 to-ink"></div>
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/40 to-transparent"></div>
+      
+      <div class="mx-auto max-w-7xl px-5 pb-24 pt-20 sm:px-8 sm:pb-32 sm:pt-28 lg:pb-40 lg:pt-36">
+       <div class="max-w-2xl">
+        <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.32em] text-mint">
+         <span class="h-px w-10 bg-mint/60"></span>Altamira Village · Caracas
+        </div>
+        <h1 class="mt-6 font-display text-[2.75rem] font-light leading-[1.05] tracking-tight text-cream sm:text-6xl lg:text-7xl">Cenar mirando<span class="block italic text-mint">al Ávila</span></h1>
+        <p class="mt-7 max-w-xl text-base font-light leading-relaxed text-cream-dim sm:text-lg">Cocina de autor de fusión caraqueña bajo la dirección del chef Víctor Moreno. Terraza rooftop con piscina, coctelería y música en vivo.</p>
+        
+        <div class="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+         <a href="#reservar" class="group inline-flex items-center justify-center gap-2 rounded-full bg-mint px-7 py-3.5 text-sm font-medium tracking-wide text-ink transition-all duration-300 hover:bg-cream hover:shadow-[0_0_36px_rgba(159,216,180,0.5)]">Reservar mi mesa
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+         </a>
+         <a class="inline-flex items-center justify-center gap-2 rounded-full border border-cream/25 px-7 py-3.5 text-sm font-light tracking-wide text-cream transition-all duration-300 hover:border-mint hover:text-mint" href="#menu-preview">Ver el menú</a>
+        </div>
+
+        <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm text-cream-dim">
+         <div class="flex items-center gap-2">
+          <div class="flex items-center gap-0.5 text-gold">
+           ★★★★★
+          </div>
+          <span class="text-cream font-medium">4.5</span><span class="text-cream-dim/70">· Google Maps / GuíaPana</span>
+         </div>
+         <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-mint"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Nivel Terrazas, Altamira Village
+         </div>
+        </div>
+       </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experiencia" class="relative bg-ink py-24 sm:py-32 border-t border-cream/5">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+       <div class="max-w-2xl">
+        <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.32em] text-terracotta">
+         <span class="h-px w-10 bg-terracotta/60"></span>La experiencia
+        </div>
+        <h2 class="mt-5 font-display text-4xl font-light leading-tight text-cream sm:text-5xl">Un ambiente <span class="italic text-mint">incomparable</span></h2>
+        <p class="mt-5 text-base font-light leading-relaxed text-cream-dim">Disfruta de nuestra terraza al aire libre, brunch los fines de semana, coctelería exclusiva y eventos de música en vivo en Chacao.</p>
+       </div>
+       
+       <div class="mt-14 grid gap-6 md:grid-cols-3">
+        <article class="group relative overflow-hidden rounded-2xl border border-cream/8 bg-ink-soft">
+         <div class="relative h-72 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Cena romántica Menta & Romero" class="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-soft via-ink-soft/30 to-transparent"></div>
+          <span class="absolute left-4 top-4 rounded-full border border-mint/40 bg-ink/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-mint backdrop-blur-sm">Para dos</span>
+         </div>
+         <div class="p-6">
+          <h3 class="font-display text-2xl font-normal text-cream">Cenas Románticas</h3>
+          <p class="mt-3 text-sm font-light leading-relaxed text-cream-dim">Ubicación privilegiada en la terraza con vistas al Ávila iluminado y veladas a la luz de las velas.</p>
+         </div>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-2xl border border-cream/8 bg-ink-soft">
+         <div class="relative h-72 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Coctelería y música en vivo" class="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-soft via-ink-soft/30 to-transparent"></div>
+          <span class="absolute left-4 top-4 rounded-full border border-mint/40 bg-ink/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-mint backdrop-blur-sm">Música & Cocteles</span>
+         </div>
+         <div class="p-6">
+          <h3 class="font-display text-2xl font-normal text-cream">Agenda Cultural & Bar</h3>
+          <p class="mt-3 text-sm font-light leading-relaxed text-cream-dim">Tragos de autor, noches de jazz, música en vivo y el mejor ambiente de Altamira.</p>
+         </div>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-2xl border border-cream/8 bg-ink-soft">
+         <div class="relative h-72 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Brunch y eventos corporativos" class="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-soft via-ink-soft/30 to-transparent"></div>
+          <span class="absolute left-4 top-4 rounded-full border border-mint/40 bg-ink/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em] text-mint backdrop-blur-sm">Brunch & Eventos</span>
+         </div>
+         <div class="p-6">
+          <h3 class="font-display text-2xl font-normal text-cream">Brunch & Reuniones</h3>
+          <p class="mt-3 text-sm font-light leading-relaxed text-cream-dim">Propuestas gastronómicas para mañanas de fin de semana y espacios adaptados para eventos privados.</p>
+         </div>
+        </article>
+       </div>
+      </div>
+    </section>
+
+    <!-- REAL MENU SECTION -->
+    <section id="menu-preview" class="py-24 bg-gradient-to-b from-ink to-ink-soft border-t border-cream/5">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="text-center max-w-2xl mx-auto">
+          <div class="flex justify-center items-center gap-3 text-[0.7rem] uppercase tracking-[0.32em] text-mint">
+            <span class="h-px w-10 bg-mint/60"></span>Carta Destacada<span class="h-px w-10 bg-mint/60"></span>
+          </div>
+          <h2 class="mt-5 font-display text-4xl font-light text-cream sm:text-5xl">Especialidades de la <span class="italic text-mint">Casa</span></h2>
+          <p class="mt-4 text-cream-dim text-sm sm:text-base font-light">Selección de los platos más aclamados por nuestros comensales en Caracas.</p>
+        </div>
+
+        <div class="mt-14 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+          <div class="p-6 rounded-2xl bg-ink/60 border border-cream/10">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-display text-xl text-cream font-medium">Carpaccio de Lomito</h3>
+              <span class="text-mint font-semibold">Insignia</span>
+            </div>
+            <p class="mt-2 text-sm text-cream-dim font-light">Finas láminas de lomito marinado con aderezo especial, láminas de queso madurado y alcaparras.</p>
+          </div>
+          
+          <div class="p-6 rounded-2xl bg-ink/60 border border-cream/10">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-display text-xl text-cream font-medium">Pulpo Trufado</h3>
+              <span class="text-mint font-semibold">Recomendado</span>
+            </div>
+            <p class="mt-2 text-sm text-cream-dim font-light">Laminado de pulpo tierno bañado en aceite de trufa blanca y toques cítricos de autor.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-ink/60 border border-cream/10">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-display text-xl text-cream font-medium">Focaccia Rellena</h3>
+              <span class="text-mint font-semibold">Favorito</span>
+            </div>
+            <p class="mt-2 text-sm text-cream-dim font-light">Pan artesanal horneado en casa, relleno con hierbas aromáticas, quesos y embutidos seleccionados.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-ink/60 border border-cream/10">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-display text-xl text-cream font-medium">Cappelletti de Cordero</h3>
+              <span class="text-mint font-semibold">Plato Fuerte</span>
+            </div>
+            <p class="mt-2 text-sm text-cream-dim font-light">Pasta fresca elaborada a mano y rellena de cordero braceado en su propia reducción de romero.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESERVATION SECTION -->
+    <section id="reservar" class="py-24 bg-ink relative">
+      <div class="mx-auto max-w-3xl px-5 sm:px-8">
+        <div class="rounded-3xl border border-cream/15 bg-ink-soft p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+          <div class="text-center">
+            <span class="text-[0.7rem] uppercase tracking-[0.32em] text-mint">Atención Directa</span>
+            <h2 class="mt-3 font-display text-3xl sm:text-4xl text-cream">Solicitud de Reserva</h2>
+            <p class="mt-2 text-cream-dim text-sm font-light">Reserva tu mesa en el Altamira Village Hotel & Suite.</p>
+          </div>
+
+          <form id="reservation-form" class="mt-10 grid gap-6 sm:grid-cols-2">
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-cream-dim mb-2">Nombre completo</label>
+              <input type="text" id="res-name" required class="w-full rounded-xl bg-ink border border-cream/20 px-4 py-3 text-sm text-cream focus:border-mint focus:outline-none transition-colors" placeholder="Ej. Carlos Silva">
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-cream-dim mb-2">Teléfono / WhatsApp</label>
+              <input type="tel" id="res-phone" required class="w-full rounded-xl bg-ink border border-cream/20 px-4 py-3 text-sm text-cream focus:border-mint focus:outline-none transition-colors" placeholder="Ej. 0412 1234567">
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-cream-dim mb-2">Fecha deseada</label>
+              <input type="date" id="res-date" required class="w-full rounded-xl bg-ink border border-cream/20 px-4 py-3 text-sm text-cream focus:border-mint focus:outline-none transition-colors">
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wider text-cream-dim mb-2">Número de Personas</label>
+              <select id="res-people" class="w-full rounded-xl bg-ink border border-cream/20 px-4 py-3 text-sm text-cream focus:border-mint focus:outline-none transition-colors">
+                <option>2 Personas</option>
+                <option>3 - 4 Personas</option>
+                <option>5 - 8 Personas</option>
+                <option>Grupo grande / Evento</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs uppercase tracking-wider text-cream-dim mb-2">Notas adicionales</label>
+              <textarea id="res-notes" rows="3" class="w-full rounded-xl bg-ink border border-cream/20 px-4 py-3 text-sm text-cream focus:border-mint focus:outline-none transition-colors" placeholder="Cumpleaños, mesa cerca de la terraza, etc."></textarea>
+            </div>
+            <div class="sm:col-span-2 text-center mt-2">
+              <button type="submit" class="w-full sm:w-auto rounded-full bg-mint px-10 py-4 text-sm font-medium tracking-wide text-ink transition-all hover:bg-cream hover:shadow-[0_0_30px_rgba(159,216,180,0.5)]">
+                Enviar reserva por WhatsApp
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION & MAP SECTION -->
+    <section id="contacto" class="py-20 bg-ink-soft border-t border-cream/10">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-[0.7rem] uppercase tracking-[0.32em] text-mint">Encuéntranos</span>
+          <h2 class="mt-3 font-display text-4xl text-cream">Ubicación & Horarios</h2>
+          
+          <div class="mt-8 space-y-4 text-sm text-cream-dim">
+            <p class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-mint shrink-0 mt-0.5"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span><strong>Dirección:</strong> 5ta Transversal con Av. Luis Roche, Nivel Terrazas del Hotel Altamira Village, Altamira, Caracas 1060.</span>
+            </p>
+
+            <p class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-mint shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+              <span><strong>Horarios:</strong><br>• Martes a Sábado: 12:00 p.m. – 1:00 a.m.<br>• Domingo: 12:00 p.m. – 8:00 p.m.<br>• Lunes: Cerrado</span>
+            </p>
+
+            <p class="flex items-start gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-mint shrink-0 mt-0.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span><strong>Contacto:</strong> +58 412-7005557</span>
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <a href="https://maps.google.com/?q=Altamira+Village+Caracas" target="_blank" class="inline-flex items-center gap-2 rounded-full border border-mint px-6 py-3 text-xs uppercase tracking-wider text-mint hover:bg-mint hover:text-ink transition-all">
+              Ver ubicación en Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="h-80 rounded-2xl overflow-hidden border border-cream/10 relative">
+          <!-- Embedded OpenStreetMap Frame centered in Altamira Village -->
+          <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-66.8520%2C10.5000%2C-66.8440%2C10.5050&amp;layer=mapnik&amp;marker=10.50288%2C-66.84858"></iframe>
+        </div>
+      </div>
+    </section>
+
+   </main>
+
+   <!-- FOOTER -->
+   <footer class="border-t border-cream/10 bg-ink py-8 text-center text-xs text-cream-dim/60">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+     <p>© 2026 Menta & Romero — Altamira Village, Caracas. Todos los derechos reservados.</p>
+     <a href="https://instagram.com/mentayromero" target="_blank" class="text-mint hover:underline">@mentayromero en Instagram</a>
+    </div>
+   </footer>
+
+  </div>
+
+  <script>
+    // Menu toggle for Mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Send WhatsApp reservation on submit
+    const reservationForm = document.getElementById('reservation-form');
+    reservationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('res-name').value;
+      const phone = document.getElementById('res-phone').value;
+      const date = document.getElementById('res-date').value;
+      const people = document.getElementById('res-people').value;
+      const notes = document.getElementById('res-notes').value;
+
+      const message = `¡Hola! Me gustaría reservar en Menta %26 Romero:%0A%0A- *Nombre:* ${encodeURIComponent(name)}%0A- *Teléfono:* ${encodeURIComponent(phone)}%0A- *Fecha:* ${encodeURIComponent(date)}%0A- *Personas:* ${encodeURIComponent(people)}%0A- *Notas:* ${encodeURIComponent(notes)}`;
+      
+      window.open(`https://wa.me/584127005557?text=${message}`, '_blank');
+    });
+  </script>
+ </body>
+</html>
